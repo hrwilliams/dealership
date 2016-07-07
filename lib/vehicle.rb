@@ -1,4 +1,6 @@
 class Vehicle
+  @@vehicles = []
+
   define_method(:initialize) do |make, model, year|
     @make = make
     @model = model
@@ -16,10 +18,10 @@ class Vehicle
   define_method(:year) do
     @year
   end
-end
 
-describe(".all") do
-  it("is empty at first") do
-    expect(Vehicle.all()).to(eq([]))
+  define_singleton_method(:all) do
+    @@vehicles
   end
+
+
 end
