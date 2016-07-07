@@ -9,4 +9,12 @@ describe('the vehicles path' , {:type => :feature}) do
     click_link('See Vehicle List')
     expect(page).to have_content("Here are the vehicles on this lot:")
   end
+end  
+
+describe('the vehicles/new path' , {:type => :feature}) do
+  it('allows user to click on link to display form to add vehicle') do
+    visit('/')
+    click_link('Add New Vehicle')
+    expect(page).to have_content("Add a vehicle")
+  end
 end
