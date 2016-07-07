@@ -16,6 +16,10 @@ class Vehicle
   define_method(:year) do
     @year
   end
+end
 
-
+describe(".all") do
+  it("is empty at first") do
+    expect(Vehicle.all()).to(eq([]))
+  end
 end
