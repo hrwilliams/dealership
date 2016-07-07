@@ -1,5 +1,5 @@
 class Vehicle
-  # attr_reader(:make, :model, :year, :color, :engine_size, :number_of_doors, :id)
+  attr_reader(:make, :model, :year, :color, :engine_size, :number_of_doors, :id)
   @@vehicles = []
 
   define_method(:initialize) do |attributes|
@@ -10,30 +10,6 @@ class Vehicle
     @engine_size= attributes.fetch(:engine_size)
     @number_of_doors = attributes.fetch(:number_of_doors)
     @id = @@vehicles.length().+(1)
-  end
-
-  define_method(:make) do
-    @make
-  end
-
-  define_method(:model) do
-    @model
-  end
-
-  define_method(:year) do
-    @year
-  end
-
-  define_method(:color) do
-    @color
-  end
-
-  define_method(:engine_size) do
-    @engine_size
-  end
-
-  define_method(:number_of_doors) do
-    @number_of_doors
   end
 
   define_singleton_method(:all) do
@@ -48,9 +24,6 @@ class Vehicle
     @@vehicles = []
   end
 
-  define_method(:id) do
-    @id
-  end
 
   define_method(:age) do
     current_year = Time.new().year()
