@@ -20,7 +20,7 @@ describe('the vehicles/new path' , {:type => :feature}) do
 end
 
 describe('the vehicles path' , {:type => :feature}) do
-  it ('allows user to add vehicle make, model, and year and then return to home page with success message') do
+  it ('allows user to add vehicle make, model, and year and then return success message') do
     visit('vehicles/new')
     click_button('Add Vehicle')
     expect(page).to have_content("Success!")
