@@ -3,7 +3,7 @@ require('vehicle')
 
 describe('Vehicle') do
   before() do
-    Vehicle.clear()
+    # Vehicle.clear()
 end
 
   describe("#make")
